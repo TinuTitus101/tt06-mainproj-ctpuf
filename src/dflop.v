@@ -6,6 +6,6 @@ begin
 if(reset)
 q<=1'b0;
 else
-q=d;
+q<=d;
 end
 endmodule
