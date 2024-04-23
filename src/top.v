@@ -119,6 +119,6 @@ ctpuf u30(y57,y58,c59,c60,y59,y60);
 ctpuf u31(y59,y60,c61,c62,y61,y62);
 ctpuf u32(y61,y62,c63,c64,Q,S);
 dflop d1(Q,clk,reset,Rar);
-counter cr1(Q,reset,ctr1);
-counter cr2(S,reset,ctr2);
+//counter cr1(Q,reset,ctr1);
+//counter cr2(S,reset,ctr2);
 endmodule
