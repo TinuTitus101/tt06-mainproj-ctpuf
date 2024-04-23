@@ -1,7 +1,12 @@
 module top(clk,T,reset,fnlout);
 input clk,T,reset;
 output fnlout;
-wire o,p,c1,c3,c4,c5,c8,c12,c13,c16,c21,c24,c27,c28,c29,c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,c40,c41,c42,c43,c44,c45,c46,c47,c48,c49,c50,c51,c52,c53,c54,c55,c56,c57,c58,c59,c60,c61,c62,c63,c64,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15,y16,y17,y18,y19,y20,y21,y22,y23,y24,y25,y26,y27,y28,y29,y30,y31,y32,y33,y34,y35,y36,y37,y38,y39,y40,y41,y42,y43,y44,y45,y46,y47,y48,y49,y50,y51,y52,y53,y54,y55,y56,y57,y58,y59,y60,y61,y62,c2,c6,c7,c9,c10,c11,c14,c15,c17,c18,c19,c20,c22,c23,c25,c26,Q,S,Rar,ctr1,ctr2,comp;
+wire o,p,c1,c3,c4,c5,c8,c12,c13,c16,c21,c24,c27,c28,c29,c30,c31,c32,c33,c34,c35,c36,c37,c38,
+  c39,c40,c41,c42,c43,c44,c45,c46,c47,c48,c49,c50,c51,c52,c53,c54,c55,c56,c57,c58,c59,c60,
+  c61,c62,c63,c64,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12,y13,y14,y15,y16,y17,y18,y19,y20,
+  y21,y22,y23,y24,y25,y26,y27,y28,y29,y30,y31,y32,y33,y34,y35,y36,y37,y38,y39,y40,y41,
+  y42,y43,y44,y45,y46,y47,y48,y49,y50,y51,y52,y53,y54,y55,y56,y57,y58,y59,y60,y61,y62,c2,
+  c6,c7,c9,c10,c11,c14,c15,c17,c18,c19,c20,c22,c23,c25,c26,Q,S,Rar,ctr1,ctr2,comp;
 assign o=T;
 assign p=T;
 assign c2 = c1 & c3;
@@ -119,6 +124,6 @@ ctpuf u30(y57,y58,c59,c60,y59,y60);
 ctpuf u31(y59,y60,c61,c62,y61,y62);
 ctpuf u32(y61,y62,c63,c64,Q,S);
 dflop d1(Q,clk,reset,Rar);
-//counter cr1(Q,reset,ctr1);
-//counter cr2(S,reset,ctr2);
+counter cr1(Q,reset,ctr1);
+counter cr2(S,reset,ctr2);
 endmodule
