@@ -4,7 +4,7 @@ output reg[1:0]q;
 always@(posedge clk)
 begin
 if(reset)
-q<=0;
+q<=2'b0;
 else
 q<=q+1;
 end
